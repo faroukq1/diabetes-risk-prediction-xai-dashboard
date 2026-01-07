@@ -1,0 +1,82 @@
+
+================================================================================
+ANOMALY DETECTION REPORT - DIABETES DATASET
+================================================================================
+
+1. DATASET OVERVIEW
+================================================================================
+Total patients: 250
+Healthy patients: 99
+Diabetic patients: 151
+
+================================================================================
+2. ANOMALY DETECTION METHODS
+================================================================================
+
+Method 1: Isolation Forest
+  - Anomalies detected: 13 (5.2%)
+  - Normal instances: 237 (94.8%)
+  - Contamination parameter: 5%
+
+Method 2: One-Class SVM
+  - Anomalies detected: 30 (12.0%)
+  - Normal instances: 220 (88.0%)
+  - Nu parameter: 5%
+
+Consensus Anomalies (both methods agree): 7 (2.8%)
+
+================================================================================
+3. ANOMALIES BY DIABETES STATUS
+================================================================================
+
+Isolation Forest:
+  Healthy patients flagged as anomaly: 7
+  Diabetic patients flagged as anomaly: 6
+
+One-Class SVM:
+  Healthy patients flagged as anomaly: 13
+  Diabetic patients flagged as anomaly: 17
+
+================================================================================
+4. POTENTIAL FINDINGS
+================================================================================
+
+Potential Undiagnosed Cases: 7
+  (Labeled healthy but showing diabetic characteristics)
+
+Potential Data Errors: 10
+  (Extreme or impossible values)
+
+================================================================================
+5. FEATURE CHARACTERISTICS (Normal vs Anomaly)
+================================================================================
+
+        Feature  Normal_Mean  Normal_Std  Anomaly_Mean  Anomaly_Std  Difference
+            age    52.143460   15.733361     28.692308    24.373430  -23.451152
+            bmi    26.536246    4.820119     35.224542    14.405399    8.688296
+fasting_glucose   182.805907   89.653501    255.692308   133.646539   72.886401
+          hba1c   228.877637  271.588059    332.230769   387.605933  103.353132
+      weight_kg    77.599916   11.501949     70.692308    50.336178   -6.907608
+
+================================================================================
+6. KEY INSIGHTS
+================================================================================
+
+- Both methods identified similar proportions of anomalies (~5%)
+- Anomalies show distinct patterns in clinical measurements
+- Some anomalies may represent undiagnosed diabetes cases
+- Extreme values suggest potential data quality issues
+- Anomaly detection complements supervised prediction models
+
+================================================================================
+7. RECOMMENDATIONS
+================================================================================
+
+1. Further investigate potential undiagnosed cases
+2. Verify data quality for flagged extreme values
+3. Use anomaly scores for risk stratification
+4. Consider anomaly detection in clinical workflows
+5. Regular monitoring of anomalous patient profiles
+
+Report generated: 2026-01-07 23:07:06.822309
+================================================================================
