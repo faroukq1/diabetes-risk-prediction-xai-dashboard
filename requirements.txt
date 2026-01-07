@@ -27,6 +27,7 @@ seaborn
 # Interactive dashboard
 plotly
 dash
+dash-bootstrap-components
 
 # Utilities
 tqdm
