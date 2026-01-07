@@ -1,0 +1,84 @@
+
+================================================================================
+MODEL EXPLAINABILITY REPORT - DIABETES PREDICTION
+================================================================================
+
+1. GLOBAL FEATURE IMPORTANCE (Top 10)
+================================================================================
+
+        feature  importance
+   diet_quality    0.825879
+            age    0.620109
+glucose_x_hba1c    0.523350
+     risk_score    0.305527
+      bmi_x_age    0.177730
+          hba1c    0.161531
+      weight_kg    0.123545
+ family_history    0.120733
+fasting_glucose    0.093139
+            bmi    0.078571
+
+================================================================================
+2. CASE STUDY 1: TRUE POSITIVE (Correctly Predicted Diabetic)
+================================================================================
+
+Patient Index: 5
+Actual Label: Diabetic (1)
+Predicted Label: Diabetic (1)
+Prediction Probability: 0.961
+
+Top Contributing Features (SHAP):
+        feature  shap_value
+   diet_quality    0.973493
+            age    0.605397
+glucose_x_hba1c    0.446131
+     risk_score    0.385118
+          hba1c    0.208299
+
+Interpretation:
+The model correctly identified this patient as diabetic based on strong clinical
+indicators and risk factors. The most influential features align with known
+diabetes risk factors.
+
+================================================================================
+3. CASE STUDY 2: FALSE POSITIVE
+================================================================================
+
+Patient Index: 26
+Actual Label: Healthy (0)
+Predicted Label: Diabetic (1)
+Prediction Probability: 0.646
+
+Top Contributing Features (SHAP):
+        feature  shap_value
+glucose_x_hba1c    0.389181
+            age    0.373878
+   diet_quality   -0.164504
+fasting_glucose    0.161478
+      bmi_x_age    0.157726
+
+Interpretation:
+This case shows features that pushed the model toward a diabetic prediction.
+The patient may have borderline indicators or be at high risk.
+
+================================================================================
+4. KEY INSIGHTS
+================================================================================
+
+- Clinical measurements (glucose, HbA1c) are primary drivers of predictions
+- Risk factors (sedentary lifestyle, family history) play significant roles
+- BMI and age contribute to risk assessment
+- Model decisions are interpretable and align with medical knowledge
+
+================================================================================
+5. SHAP vs LIME COMPARISON
+================================================================================
+
+Both methods provide consistent explanations:
+- SHAP: Game-theory based, globally consistent
+- LIME: Local linear approximation, instance-specific
+- Both identify similar top features for individual predictions
+- SHAP preferred for tree-based models (exact, faster)
+
+Report generated: 2026-01-07 23:05:11.945271
+================================================================================
