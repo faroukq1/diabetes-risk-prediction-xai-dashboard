@@ -1,0 +1,51 @@
+Travail supplémentaire du TP N° 2  (Extension)
+Objectif
+Améliorer l'analyse prédictive du diabète en intégrant des techniques avancées de machine learning et de visualisation interactive, tout en exploitant le data warehouse conçu précédemment. Ce travail supplémentaire permet d'aller plus loin dans l'analyse des données tout en développant des compétences avancées en data science et business intelligence. 
+Partie 1 : Enrichissement du Data Warehouse
+    1. Création de Nouvelles Dimensions
+    • Ajouter une dimension "Facteurs de Risque" (ex. : sédentarité, alimentation, antécédents familiaux) dans le data cube.
+    • Définir des requêtes décisionnelles pour analyser la corrélation entre ces facteurs et le diabète
+    2. Ajout de Données Externes (Optionnel ) Bonus 
+    • Intégrer des données environnementales (ex. : taux de pollution, accès aux soins) ou socio-économiques (ex. : niveau d'éducation, revenu) pour analyser leur impact sur la prévalence du diabète.
+    • Source possible : Données publiques (ex. : Banque Mondiale, OMS) ou enquêtes locales.   RQ : Ça sera des données simulées 
+Partie 2 : Techniques Avancées de Machine Learning
+    1. Utilisation de Modèles Hybrides
+    • Combiner des modèles de deep learning (ex. : réseaux de neurones) avec des méthodes ensemblistes (ex. : XGBoost) pour améliorer la prédiction.
+    • Exemple : Utiliser un autoencodeur pour réduire la dimensionnalité des données avant de les passer à un modèle ensembliste.
+    2. Explicabilité des Modèles (XAI)
+    • Appliquer des techniques comme SHAP ou LIME pour expliquer les prédictions des modèles, en identifiant les attributs les plus influents.
+    • Objectif : Comprendre pourquoi un patient est classé comme diabétique ou non.
+    3. Détection des Anomalies
+    • Utiliser des algorithmes de détection d'anomalies (ex. : Isolation Forest, One-Class SVM) pour identifier des profils de patients atypiques.
+    • Application : Détecter des cas de diabète non diagnostiqués ou des erreurs de collecte de données.
+
+Partie 3 : Visualisation Interactive
+    1. Tableau de Bord avec Power BI ou Tableau
+    • Créer un tableau de bord interactif pour visualiser : 
+            ▪ La répartition des patients par IMC, âge et classe (sain/diabétique).
+            ▪ L'évolution temporelle des indicateurs cliniques (ex. : GAJ, HbA1c).
+            ▪ Les corrélations entre les facteurs de risque et le diabète.
+    • Outils : Power BI, Tableau, ou Python (Plotly/Dash).
+Partie 4 : Évaluation et Comparaison
+    1. Benchmark des Modèles
+    • Comparer les performances des modèles hybrides et des méthodes ensemblistes classiques (ex. : Random Forest vs. XGBoost + Deep Learning).
+    • Métriques : Précision, rappel, F1-score, AUC-ROC, et temps de calcul.
+    2. Analyse des Résultats
+    • Discuter des avantages et limites de chaque approche.
+    • Proposer des pistes d'amélioration pour de futurs travaux (ex. : collecte de données supplémentaires, optimisation des hyperparamètres).
+Livrables Attendus
+    1. Rapport Technique Supplémentaire
+    • Description des méthodes avancées utilisées.
+    • Résultats des analyses et visualisations.
+    • Discussion sur l'apport de ces techniques par rapport au TP initial.
+    2. Code Source
+    • Scripts Python pour les modèles hybrides, l'explicabilité (SHAP/LIME), et la détection d'anomalies.
+    • Fichiers du tableau de bord interactif (Power BI/Tableau) ou code Python (Plotly/Dash).
+    3. Présentation
+    • Synthèse des résultats sous forme d’un rapport contenant tous les concepts utilisés et résultats obtenus( TP initial et supplément )
+Outils Recommandés
+    • Data Warehouse : Talend, SQL, Python (Pandas).
+    • Machine Learning : Python (scikit-learn, TensorFlow, XGBoost, imbalanced-learn, SHAP, LIME).
+    • Visualisation : Power BI, Tableau, Plotly, Dash, Folium.
+    • Détection d'Anomalies : Scikit-learn (Isolation Forest, One-Class SVM).
+                              

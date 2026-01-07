@@ -62,9 +62,3 @@ htmlcov/
 Thumbs.db
 .vscode/
 .idea/
-
-# ----------------------------
-# Data science / BI project files
-# ----------------------------
-data/
-data
