@@ -1,0 +1,70 @@
+# ----------------------------
+# Python (basics)
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# ----------------------------
+# Virtual environments
+# ----------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# dotenv / secrets
+.env
+.env.*
+*.key
+
+# ----------------------------
+# Packaging / build
+# ----------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ----------------------------
+# Jupyter / IPython
+# ----------------------------
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ----------------------------
+# Test / coverage
+# ----------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ----------------------------
+# Logs / temp
+# ----------------------------
+*.log
+*.tmp
+
+# ----------------------------
+# OS / editor
+# ----------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ----------------------------
+# Data science / BI project files
+# ----------------------------
+data/
+data
